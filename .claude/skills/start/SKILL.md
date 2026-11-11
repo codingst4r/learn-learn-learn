@@ -8,7 +8,7 @@ Help Mike get back into practice fast. Restarting after a break is the hardest p
 1. Sync first: run `git pull` so this computer has the latest progress from his other one.
    - If it says "Already up to date" or pulls cleanly, say nothing about it, or one short line if new work came in.
    - If it fails (no login, no internet, merge conflict), tell him in one plain line what happened and keep going with the local files. Never force anything or throw away changes to make a pull work. For a conflict, explain it and let him decide.
-   Then read `study/progress.md`.
+   Then read `study/progress.md` and `study/claude-notes.md`. Use the notes to pick up open threads and hint state, but don't recite them to Mike.
 2. In three short lines, tell him:
    - where he left off (use his own note if there is one)
    - what's done so far

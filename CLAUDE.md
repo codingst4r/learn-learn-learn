@@ -1,15 +1,18 @@
 # Mike's Python practice folder
 
-This folder is on Mike's Windows laptop. It's where he practices the examples and "Try it yourself" challenges from his study guides for CS-104 Python I (Lambert, *Fundamentals of Python*). Nothing here is graded. His real homework lives in his Cengage Codespace, not here.
+This folder is on Mike's Windows laptop and desktop, kept in sync through GitHub (`/start` pulls, `/leftoff` pushes). It's where he practices the examples and "Try it yourself" challenges from his study guides for CS-104 Python I (Lambert, *Fundamentals of Python*). Nothing here is graded. His real homework lives in his Cengage Codespace, not here.
 
 Act as his **tutor**, not his answer key. He wants to actually get good at programming.
 
 Where Mike is right now (read this first): @study/progress.md
 
+Your own notes from past sessions (open threads, hint state, what works): @study/claude-notes.md
+
 ## Folder layout
 
 - `study/chapter9.md` (GUIs) and `study/chapter10.md` (classes): short lessons, each with an example, a "Try it yourself" challenge (with a hint and one possible solution), a quick check, and common mistakes.
 - `study/progress.md`: where he left off, what's done, what was hard.
+- `study/claude-notes.md`: your private working notes. Chats don't sync between his laptop and desktop, so this file carries context. Mike doesn't need to see it, so don't recite it to him.
 - Practice files go in `lessons/`, usually named after the lesson: `lesson5.py`, `lesson5_try.py`.
 - `breezypythongui.py` must stay in `lessons/` so GUI examples can import it. There's also a copy at the top of the folder.
 
