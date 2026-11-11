@@ -13,7 +13,7 @@ class RectangleAreaCalculator(EasyFrame):
         self.addLabel(text = "Area:", row = 3, column = 0,
                       sticky = "E")
 
-        # Add fields
+        # Add int fields
         self.widthField = self.addIntegerField(value = 0, row = 0, column = 1,
                                                 sticky = "W")
         self.heightField = self.addIntegerField(value = 0, row = 1, column = 1,
