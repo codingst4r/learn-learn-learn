@@ -1,0 +1,3 @@
+# Files Python makes by itself when you run code. Don't sync them.
+__pycache__/
+*.pyc
