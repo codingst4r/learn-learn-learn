@@ -3,20 +3,19 @@
 > Claude's own working notes so a new session on either computer starts with context. Mike doesn't need to read this. `/leftoff` rewrites it each time. Keep it under ~20 lines, and drop anything stale.
 
 ## Open threads
-- Lesson 6 try-it (`lessons/lesson6_try.py`): output field still uses `state = "disabled"`; suggested `"readonly"`. Also asked whether the "Area:" label's `sticky = "E"` (others are "W") was on purpose. No answer yet.
-- Lesson 4 launcher (`lessons/lesson4.py`): typing `cat` at the menu crashes with ValueError. Offered try/except as an optional challenge; he skipped it. Lesson 8 covers the GUI version.
-- Next up: Lesson 7, then homework 9-3 (temperature converter: lessons 3, 5, 6, 7). He asked to aim practice at homework.
+- Next: homework 9-3 (temperature converter: lessons 3, 5, 6, 7) or Lesson 8 first. He asked to aim practice at homework. Remind him to follow the spec exactly on homework (he likes adding his own twists).
+- Lesson 7 try-it accepted as his own design (warn once at 0, then disable -1). Small leftover: indent on line 26 is 12 spaces; Reset within 2 s gets overwritten by the pending `after`.
+- Lesson 4 launcher: typing `cat` crashes with ValueError. Lesson 8 covers the GUI version.
 
 ## Hint ladder state
 - No try-it in progress.
 
 ## What works with Mike (beyond CLAUDE.md)
-- When he says "no distractions" / "keep moving", drop side challenges and go straight to the next step.
-- He experiments on his own (launcher menu, Reset button, image in title screen). Praise it and explain what happened.
-- Explain-it-back questions land well. Wrong first guesses fixed by a different angle (e.g. bouncer analogy for .gitignore).
-- He says "boom" when he wants a check.
+- He experiments on his own and pushes back with reasons. Before correcting him, check what he actually means. On `self` I argued past his real point once (he meant "self in newClass has nothing to do with ClickCounter," which was right).
+- Running a tiny non-GUI demo (two objects, print self) made the point concrete fast.
+- Explain-it-back questions land well. When he says "choose," just pick and give a reason.
+- "no distractions" / "keep moving" = drop side challenges. "boom" = he wants a check.
 
 ## Setup
-- Git repo synced to GitHub (remote is named `mainremote`). Laptop and desktop both clone it. Credential manager set up on the laptop.
-- Learned so far: .gitignore only skips untracked files; `git rm --cached` untracks; commits only include staged files.
+- Git remote `mainremote` (GitHub). On 2026-11-11 the laptop failed pull with an SSL cert error; he ran `git config --global http.sslBackend schannel` and it worked.
 - Desktop commits with a different git name/email than the laptop (harmless).

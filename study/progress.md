@@ -4,8 +4,8 @@
 
 ## Where I left off
 
-- 2026-11-09: Finished Chapter 9 Lessons 5 and 6. The coin flip and rectangle area try-its both work (`lessons/lesson5_try.py`, `lessons/lesson6_try.py`). Small leftover: the area output field should be `"readonly"`, not `"disabled"`.
-- next: Lesson 7 (instance variables), the last lesson before homework 9-3. Then start 9-3.
+- 2026-11-11: Finished Chapter 9 Lesson 7. The score keeper try-it works (`lessons/lesson7_try.py`). My version warns you once at 0, then disables -1 until you press +1. (The guide's version disables -1 as soon as the score hits 0. For homework, build exactly what the instructions say.)
+- next: start homework 9-3 (temperature converter), or do Lesson 8 first (pop-up for bad input).
 
 ## Done
 
@@ -16,7 +16,7 @@
 - [x] 4. Making it look right: colors, fonts, images
 - [x] 5. Buttons and event handlers
 - [x] 6. Input and output with entry fields
-- [ ] 7. Instance variables: how the window remembers stuff
+- [x] 7. Instance variables: how the window remembers stuff
 - [ ] 8. Bad input? Don't crash, pop up a message
 - [ ] 9. Panels: grids inside your grid
 - [ ] 10. Text areas: lots of lines of output
@@ -70,8 +70,12 @@
 
 - Nested loops with a grid: which loop is rows and which is columns. The inner loop changes with every item, so it sets the direction things fill in.
 - Why images need `self.picture`: the window keeps widgets alive, but you have to keep pictures alive yourself.
+- What `self` is: one object built from the class (an *instance*), not the method you're in and not the class itself. Two windows = two `self`s, each with its own `clicks`. Plain variables (no `self.`) disappear when the method ends.
+- In a GUI, don't use `time.sleep` (it freezes the window). Use `self.after(ms, self.method)`.
 
 ## Session log (newest first, keep the last 5)
+
+- 2026-11-11: Fixed git sync (switched to schannel). Finished Lesson 7: worked out what `self` really is, built a score keeper with a 2-second warning using `self.after`. Fixed the Lesson 6 readonly leftover.
 
 - 2026-11-09 (later): Finished Lessons 5 and 6. Coin flip with an extra Reset button, plus a rectangle area calculator. Saw that typing 3.5 in an IntegerField causes a ValueError (Lesson 8 handles that).
 - 2026-11-09: Finished Lesson 4 and its try-it. Added Smokey (an image) and a terminal launcher menu to `lesson4.py`, and worked out what each sticky setting does.
