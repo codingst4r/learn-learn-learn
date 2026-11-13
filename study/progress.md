@@ -4,8 +4,8 @@
 
 ## Where I left off
 
-- 2026-11-11: Finished Chapter 9 Lesson 7. The score keeper try-it works (`lessons/lesson7_try.py`). My version warns you once at 0, then disables -1 until you press +1. (The guide's version disables -1 as soon as the score hits 0. For homework, build exactly what the instructions say.)
-- next: start homework 9-3 (temperature converter), or do Lesson 8 first (pop-up for bad input).
+- 2026-11-13: Typed the Lesson 8 example (safe tip calculator, `lessons/lesson8.py`). Haven't tested it with bad input yet.
+- next: run `py lessons\lesson8.py`, type `3.5` or `cat` to see the pop-up, then experiment with try/except. After Lesson 8, start homework 9-3.
 
 ## Done
 
@@ -75,8 +75,8 @@
 
 ## Session log (newest first, keep the last 5)
 
+- 2026-11-13: Short one. Typed the Lesson 8 example. Set up autopep8 as my Python formatter (Shift+Alt+F), keeping the book's spaces around `=`.
 - 2026-11-11: Fixed git sync (switched to schannel). Finished Lesson 7: worked out what `self` really is, built a score keeper with a 2-second warning using `self.after`. Fixed the Lesson 6 readonly leftover.
-
 - 2026-11-09 (later): Finished Lessons 5 and 6. Coin flip with an extra Reset button, plus a rectangle area calculator. Saw that typing 3.5 in an IntegerField causes a ValueError (Lesson 8 handles that).
 - 2026-11-09: Finished Lesson 4 and its try-it. Added Smokey (an image) and a terminal launcher menu to `lesson4.py`, and worked out what each sticky setting does.
 - 2026-11-06: Finished Chapter 9 Lessons 1 to 3, including the Seat 1 to 12 try-it. Ran the Lesson 4 example. Moved practice files into `lessons/`.

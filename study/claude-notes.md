@@ -3,19 +3,20 @@
 > Claude's own working notes so a new session on either computer starts with context. Mike doesn't need to read this. `/leftoff` rewrites it each time. Keep it under ~20 lines, and drop anything stale.
 
 ## Open threads
-- Next: homework 9-3 (temperature converter: lessons 3, 5, 6, 7) or Lesson 8 first. He asked to aim practice at homework. Remind him to follow the spec exactly on homework (he likes adding his own twists).
-- Lesson 7 try-it accepted as his own design (warn once at 0, then disable -1). Small leftover: indent on line 26 is 12 spaces; Reset within 2 s gets overwritten by the pending `after`.
-- Lesson 4 launcher: typing `cat` crashes with ValueError. Lesson 8 covers the GUI version.
+- Lesson 8: example typed in `lessons/lesson8.py`, not yet run. He plans to experiment with try/except. Lesson 8 try-it not started.
+- Then homework 9-3 (temperature converter). Remind him to follow the spec exactly on homework (he likes adding his own twists).
+- Didn't confirm autopep8 actually kept spaces / fixed line 26 indent in lesson7_try.py. Ask if it worked.
+- Lesson 4 launcher: typing `cat` crashes with ValueError. Good try/except practice target.
 
 ## Hint ladder state
 - No try-it in progress.
 
 ## What works with Mike (beyond CLAUDE.md)
-- He experiments on his own and pushes back with reasons. Before correcting him, check what he actually means. On `self` I argued past his real point once (he meant "self in newClass has nothing to do with ClickCounter," which was right).
-- Running a tiny non-GUI demo (two objects, print self) made the point concrete fast.
-- Explain-it-back questions land well. When he says "choose," just pick and give a reason.
-- "no distractions" / "keep moving" = drop side challenges. "boom" = he wants a check.
+- He experiments and pushes back with reasons. Check what he actually means before correcting (argued past his real point on `self` once).
+- Tiny non-GUI demos (two objects, print self) make points concrete fast.
+- He cares about readability: prefers book style `title = "x"` over PEP 8. Respect it.
+- "choose" = just pick with a reason. "no distractions" = drop side challenges. "boom" = wants a check.
 
 ## Setup
-- Git remote `mainremote` (GitHub). On 2026-11-11 the laptop failed pull with an SSL cert error; he ran `git config --global http.sslBackend schannel` and it worked.
-- Desktop commits with a different git name/email than the laptop (harmless).
+- Git remote `mainremote`. Laptop uses `http.sslBackend schannel` (fixed SSL error 2026-11-11).
+- `.vscode/settings.json`: autopep8 is the Python formatter with `--ignore=E251`, format on save off. Black ext still installed but unused. Desktop needs the autopep8 extension installed.
