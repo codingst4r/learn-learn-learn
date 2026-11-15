@@ -1,5 +1,6 @@
 from breezypythongui import EasyFrame
 
+
 class RectangleAreaCalculator(EasyFrame):
     def __init__(self):
         EasyFrame.__init__(self, title = "Area of Rectangle Calculator",
@@ -15,11 +16,11 @@ class RectangleAreaCalculator(EasyFrame):
 
         # Add int fields
         self.widthField = self.addIntegerField(value = 0, row = 0, column = 1,
-                                                sticky = "W")
+                                               sticky = "W")
         self.heightField = self.addIntegerField(value = 0, row = 1, column = 1,
                                                 sticky = "W")
         self.areaField = self.addIntegerField(value = 0, row = 3, column = 1,
-                                           sticky = "E", state = "readonly")
+                                              sticky = "E", state = "readonly")
 
         # Add compute button
         self.calcButton = self.addButton(text = "Compute", row = 2, column = 1,
@@ -30,8 +31,10 @@ class RectangleAreaCalculator(EasyFrame):
 
         self.areaField.setNumber(area)
 
+
 def main():
     RectangleAreaCalculator().mainloop()
+
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,6 @@
 from breezypythongui import EasyFrame
 
+
 class SafeTipCalculator(EasyFrame):
     """Tip calculator that handles bad input."""
 
@@ -27,8 +28,10 @@ class SafeTipCalculator(EasyFrame):
             self.messageBox(title = "Oops",
                             message = "Bill and Tip % have to be numbers.")
 
+
 def main():
     SafeTipCalculator().mainloop()
+
 
 if __name__ == "__main__":
     main()

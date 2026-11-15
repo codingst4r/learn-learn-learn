@@ -4,8 +4,8 @@
 
 ## Where I left off
 
-- 2026-11-13: Typed the Lesson 8 example (safe tip calculator, `lessons/lesson8.py`). Haven't tested it with bad input yet.
-- next: run `py lessons\lesson8.py`, type `3.5` or `cat` to see the pop-up, then experiment with try/except. After Lesson 8, start homework 9-3.
+- 2026-11-14: Finished Lesson 8 (area calculator now pops up a message on bad input). Ran the Lesson 9 panels example. Started the Lesson 9 try-it in `lessons/lesson9_try.py`: the third panel and its label are in, and `submit` is half written.
+- next: finish `submit` so it counts how many of the two fields are blank and shows it in the bottom label.
 
 ## Done
 
@@ -17,7 +17,7 @@
 - [x] 5. Buttons and event handlers
 - [x] 6. Input and output with entry fields
 - [x] 7. Instance variables: how the window remembers stuff
-- [ ] 8. Bad input? Don't crash, pop up a message
+- [x] 8. Bad input? Don't crash, pop up a message
 - [ ] 9. Panels: grids inside your grid
 - [ ] 10. Text areas: lots of lines of output
 - [ ] 11. Pop-ups and file dialogs
@@ -25,9 +25,9 @@
 - [ ] 13. Keyboard events: pressing Enter
 
 ### Chapter 9 exercises
-- [ ] 9-1 Tax calculator with a GUI
-- [ ] 9-2 Bouncy ball with a GUI
-- [ ] 9-3 Temperature converter
+- [x] 9-1 Tax calculator with a GUI
+- [x] 9-2 Bouncy ball with a GUI
+- [x] 9-3 Temperature converter
 - [ ] 9-4 Converter that responds to Enter
 - [ ] 9-5 Reverse guessing game (computer guesses)
 - [ ] 9-6 Tax calculator with filing status
@@ -75,6 +75,7 @@
 
 ## Session log (newest first, keep the last 5)
 
+- 2026-11-14: Finished Lesson 8 (broke the tip calculator on purpose to find `ValueError`, added try/except to the area calculator). Did Lesson 9 panels: each panel is one cell of the window with its own grid, and it stretches to fill its cell. Homework 9-1 to 9-3 all passed.
 - 2026-11-13: Short one. Typed the Lesson 8 example. Set up autopep8 as my Python formatter (Shift+Alt+F), keeping the book's spaces around `=`.
 - 2026-11-11: Fixed git sync (switched to schannel). Finished Lesson 7: worked out what `self` really is, built a score keeper with a 2-second warning using `self.after`. Fixed the Lesson 6 readonly leftover.
 - 2026-11-09 (later): Finished Lessons 5 and 6. Coin flip with an extra Reset button, plus a rectangle area calculator. Saw that typing 3.5 in an IntegerField causes a ValueError (Lesson 8 handles that).
