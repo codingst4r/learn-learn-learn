@@ -4,8 +4,8 @@
 
 ## Where I left off
 
-- 2026-11-14: Finished Lesson 8 (area calculator now pops up a message on bad input). Ran the Lesson 9 panels example. Started the Lesson 9 try-it in `lessons/lesson9_try.py`: the third panel and its label are in, and `submit` is half written.
-- next: finish `submit` so it counts how many of the two fields are blank and shows it in the bottom label.
+- 2026-11-15: Finished Lesson 9. Skipped ahead to Lesson 13 (Enter key) for homework 9-4. The Lesson 13 try-it (`lessons/lesson13_try.py`) has both Enter binds in. Not checked yet, and the bad-input pop-up part needs a look.
+- next: `/check` the Lesson 13 try-it, then do homework 9-4. Lessons 10 to 12 come after.
 
 ## Done
 
@@ -18,7 +18,7 @@
 - [x] 6. Input and output with entry fields
 - [x] 7. Instance variables: how the window remembers stuff
 - [x] 8. Bad input? Don't crash, pop up a message
-- [ ] 9. Panels: grids inside your grid
+- [x] 9. Panels: grids inside your grid
 - [ ] 10. Text areas: lots of lines of output
 - [ ] 11. Pop-ups and file dialogs
 - [ ] 12. Check buttons and radio buttons
@@ -75,9 +75,8 @@
 
 ## Session log (newest first, keep the last 5)
 
+- 2026-11-15: Finished Lesson 9 (blank-field counter, starts at 2). Learned class vs object for methods: `self.clear()` is really `SignUpForm.clear(self)`, and `print(e)` uses the error's `__str__`. Started Lesson 13.
 - 2026-11-14: Finished Lesson 8 (broke the tip calculator on purpose to find `ValueError`, added try/except to the area calculator). Did Lesson 9 panels: each panel is one cell of the window with its own grid, and it stretches to fill its cell. Homework 9-1 to 9-3 all passed.
 - 2026-11-13: Short one. Typed the Lesson 8 example. Set up autopep8 as my Python formatter (Shift+Alt+F), keeping the book's spaces around `=`.
 - 2026-11-11: Fixed git sync (switched to schannel). Finished Lesson 7: worked out what `self` really is, built a score keeper with a 2-second warning using `self.after`. Fixed the Lesson 6 readonly leftover.
 - 2026-11-09 (later): Finished Lessons 5 and 6. Coin flip with an extra Reset button, plus a rectangle area calculator. Saw that typing 3.5 in an IntegerField causes a ValueError (Lesson 8 handles that).
-- 2026-11-09: Finished Lesson 4 and its try-it. Added Smokey (an image) and a terminal launcher menu to `lesson4.py`, and worked out what each sticky setting does.
-- 2026-11-06: Finished Chapter 9 Lessons 1 to 3, including the Seat 1 to 12 try-it. Ran the Lesson 4 example. Moved practice files into `lessons/`.

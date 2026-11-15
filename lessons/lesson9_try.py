@@ -25,20 +25,32 @@ class SignUpForm(EasyFrame):
                               command = self.help)
 
         # Panel 3 (window row 2): a 1-by-1 grid of a label
-        blankFields = self.addPanel(row = 2, column = 0)
-        blankFields.addLabel(text = "Fields left blank: ", row = 0, column = 0,
+        self.blankPanel = self.addPanel(row = 2, column = 0)
+        self.blankLabel = self.blankPanel.addLabel(text = "Fields left blank: 2", row = 0, column = 0,
                              sticky = "EWSN")
 
     def submit(self):
         userName = self.userField.getText()
-        if userName == "":
-            
-        self.messageBox(title = "Welcome",
-                        message = "Signed up as " + self.userField.getText())
+        email = self.emailField.getText()
+        blankFields = None
+        if userName and email:
+            blankFields = 0
+        elif userName or email:
+            blankFields = 1
+        elif not userName and not email:
+            blankFields = 2
+
+        self.blankLabel["text"] = "Fields left blank: " + str(blankFields)
+        
+
+        if blankFields == 0:    
+            self.messageBox(title = "Welcome",
+                        message = "Signed up as " + userName)
 
     def clear(self):
         self.userField.setText("")
         self.emailField.setText("")
+        self.blankLabel["text"] = "Fields left blank: 2"
 
     def help(self):
         self.messageBox(title = "Help",
