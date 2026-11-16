@@ -30,12 +30,52 @@ class RectangleAreaCalculator(EasyFrame):
         self.widthField.bind("<Return>", lambda event: self.calc())
         self.heightField.bind("<Return>", lambda event: self.calc())
 
-    def calc(self):
+    def errorHandler(self, wVal, hVal):
+        widthError = False
+        heightError = False
+
+        # test and catch the errors, if error: indicate which field caused it
         try:
-            area = self.widthField.getNumber() * self.heightField.getNumber()
-        except ValueError as e:
-            self.messageBox(title = "Invalid Input", message = ValueError.__cause__(e))    
-        self.areaField.setNumber(area)
+            width = self.widthField.getNumber()
+        except ValueError:
+            widthError = 'Invalid input, "' + wVal + '", in the Width Field!'
+        try:
+            height = self.heightField.getNumber()
+        except ValueError:
+            heightError = 'Invalid input, "' + hVal + '", in the Height Field!'
+
+        # if no error, calculate area and set areaField
+        if not widthError and not heightError:
+            area = width * height
+            return area
+
+        # if there's an error(s), check how/where it happened, and show the error(s)
+        if widthError and not heightError:
+            errMsg = widthError + "\n\nInput only whole numbers (integers)!"
+
+        elif heightError and not widthError:
+            errMsg = heightError + "\n\nInput only whole numbers (integers)!"
+
+        elif widthError and heightError:
+            errMsg = 'Invalid inputs, "' + wVal + '" and "' + hVal + \
+                '", in Width Field and Height Field respectively.\n\nInput only whole numbers (integers)!'
+
+        hgt = 3
+        if len(errMsg) // 50 >= 3:
+            hgt = len(errMsg) // 50 + 1
+            
+        self.messageBox(title = "Invalid Input",
+                        message = errMsg,
+                        width = 50,
+                        height = hgt + 1)
+
+    def calc(self):
+        wVal = self.widthField.getValue()
+        hVal = self.heightField.getValue()
+
+        area = self.errorHandler(wVal, hVal)
+        if area is not None:
+            self.areaField.setNumber(area)
 
 
 def main():

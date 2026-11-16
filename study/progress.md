@@ -4,8 +4,8 @@
 
 ## Where I left off
 
-- 2026-11-15: Finished Lesson 9. Skipped ahead to Lesson 13 (Enter key) for homework 9-4. The Lesson 13 try-it (`lessons/lesson13_try.py`) has both Enter binds in. Not checked yet, and the bad-input pop-up part needs a look.
-- next: `/check` the Lesson 13 try-it, then do homework 9-4. Lessons 10 to 12 come after.
+- 2026-11-16: Finished Lesson 13. The area calculator runs on Enter in both boxes, and the pop-up says exactly which box (or both) had bad input and what was typed. Cleaned it up so the message box code only appears once.
+- next: homework 9-4 (add the two Enter `bind` lines to my 9-3 converter). Then Lessons 10 to 12.
 
 ## Done
 
@@ -22,7 +22,7 @@
 - [ ] 10. Text areas: lots of lines of output
 - [ ] 11. Pop-ups and file dialogs
 - [ ] 12. Check buttons and radio buttons
-- [ ] 13. Keyboard events: pressing Enter
+- [x] 13. Keyboard events: pressing Enter
 
 ### Chapter 9 exercises
 - [x] 9-1 Tax calculator with a GUI
@@ -72,11 +72,12 @@
 - Why images need `self.picture`: the window keeps widgets alive, but you have to keep pictures alive yourself.
 - What `self` is: one object built from the class (an *instance*), not the method you're in and not the class itself. Two windows = two `self`s, each with its own `clicks`. Plain variables (no `self.`) disappear when the method ends.
 - In a GUI, don't use `time.sleep` (it freezes the window). Use `self.after(ms, self.method)`.
+- Variables that only get set inside `except` (or an `if`) might not exist later. Give them a starting value (like `= False`) at the top. Also: a method with no `return` gives back `None`.
 
 ## Session log (newest first, keep the last 5)
 
+- 2026-11-16: Finished Lesson 13 try-it with custom error pop-ups (two `try`s, flags that hold the message, `getValue()` for what was typed, box height from message length). Refactored so it's DRY.
 - 2026-11-15: Finished Lesson 9 (blank-field counter, starts at 2). Learned class vs object for methods: `self.clear()` is really `SignUpForm.clear(self)`, and `print(e)` uses the error's `__str__`. Started Lesson 13.
 - 2026-11-14: Finished Lesson 8 (broke the tip calculator on purpose to find `ValueError`, added try/except to the area calculator). Did Lesson 9 panels: each panel is one cell of the window with its own grid, and it stretches to fill its cell. Homework 9-1 to 9-3 all passed.
 - 2026-11-13: Short one. Typed the Lesson 8 example. Set up autopep8 as my Python formatter (Shift+Alt+F), keeping the book's spaces around `=`.
 - 2026-11-11: Fixed git sync (switched to schannel). Finished Lesson 7: worked out what `self` really is, built a score keeper with a 2-second warning using `self.after`. Fixed the Lesson 6 readonly leftover.
-- 2026-11-09 (later): Finished Lessons 5 and 6. Coin flip with an extra Reset button, plus a rectangle area calculator. Saw that typing 3.5 in an IntegerField causes a ValueError (Lesson 8 handles that).
