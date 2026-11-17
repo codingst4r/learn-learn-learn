@@ -4,8 +4,9 @@
 
 ## Where I left off
 
-- 2026-11-16: Finished Lesson 13. The area calculator runs on Enter in both boxes, and the pop-up says exactly which box (or both) had bad input and what was typed. Cleaned it up so the message box code only appears once.
-- next: homework 9-4 (add the two Enter `bind` lines to my 9-3 converter). Then Lessons 10 to 12.
+- 2026-11-17: Finished Lesson 12 (pizza order with a Pickup/Delivery group). Homework 9-4, 9-5 and 9-6 all passed. Started Lesson 10: ran the times table example and learned format codes like `%6.1f`. The Lesson 10 try-it is started in `lessons/lesson10_try.py` but not checked yet.
+- next: finish the Lesson 10 try-it and `/check` it. Then Lesson 11, then homework 9-7.
+- **On the desktop:** delete the old `lessons/lesson12.py` and `lessons/lesson12_try.py` there *before* running `/start`, or the pull will fail.
 
 ## Done
 
@@ -21,16 +22,16 @@
 - [x] 9. Panels: grids inside your grid
 - [ ] 10. Text areas: lots of lines of output
 - [ ] 11. Pop-ups and file dialogs
-- [ ] 12. Check buttons and radio buttons
+- [x] 12. Check buttons and radio buttons
 - [x] 13. Keyboard events: pressing Enter
 
 ### Chapter 9 exercises
 - [x] 9-1 Tax calculator with a GUI
 - [x] 9-2 Bouncy ball with a GUI
 - [x] 9-3 Temperature converter
-- [ ] 9-4 Converter that responds to Enter
-- [ ] 9-5 Reverse guessing game (computer guesses)
-- [ ] 9-6 Tax calculator with filing status
+- [x] 9-4 Converter that responds to Enter
+- [x] 9-5 Reverse guessing game (computer guesses)
+- [x] 9-6 Tax calculator with filing status
 - [ ] 9-7 TidBit payment schedule
 - [ ] 9-8 Text editor
 - [ ] 9-9 Image browser
@@ -76,8 +77,8 @@
 
 ## Session log (newest first, keep the last 5)
 
+- 2026-11-17: Lesson 12 done (saw why a default radio button matters: with none set, `getSelectedButton()` raises ValueError). 9-4 to 9-6 passed. Learned format codes in Lesson 10: `%` slot, width, `.decimals`, type, and `-` to flip alignment.
 - 2026-11-16: Finished Lesson 13 try-it with custom error pop-ups (two `try`s, flags that hold the message, `getValue()` for what was typed, box height from message length). Refactored so it's DRY.
 - 2026-11-15: Finished Lesson 9 (blank-field counter, starts at 2). Learned class vs object for methods: `self.clear()` is really `SignUpForm.clear(self)`, and `print(e)` uses the error's `__str__`. Started Lesson 13.
 - 2026-11-14: Finished Lesson 8 (broke the tip calculator on purpose to find `ValueError`, added try/except to the area calculator). Did Lesson 9 panels: each panel is one cell of the window with its own grid, and it stretches to fill its cell. Homework 9-1 to 9-3 all passed.
 - 2026-11-13: Short one. Typed the Lesson 8 example. Set up autopep8 as my Python formatter (Shift+Alt+F), keeping the book's spaces around `=`.
-- 2026-11-11: Fixed git sync (switched to schannel). Finished Lesson 7: worked out what `self` really is, built a score keeper with a 2-second warning using `self.after`. Fixed the Lesson 6 readonly leftover.
